@@ -1,11 +1,11 @@
 # tmdb-bash
-#### Shell aplication for The Movie DB API
+#### Shell script for The Movie DB API
 
 Obtain some basic information about a movie in json format
 
 ## Setup
 - Go to The Movie DB website and create an account
-- Obtain an API key using this [guide](https://www.themoviedb.org/faq/api)
+- Obtain an API key by following the [instructions](https://www.themoviedb.org/faq/api)
 - Copy your API key to the correct place in the tmdb.sh script 
 ```shell
     APIKEY="your api key"
