@@ -12,6 +12,21 @@ Obtain some basic information about a movie in json format
 ```
 - Run the script
 
+## Requirements
+
+- cURL
+- xdg-open (View the Movie Poster)
+
+```
+sudo apt-get install xdg-utils
+```
+
+- jq 
+
+```
+sudo apt install jq
+```
+
 ## How to use it
 ```
 Usage :  tmdb.sh [options] title
