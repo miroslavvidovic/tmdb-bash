@@ -3,6 +3,21 @@
 
 Obtain some basic information about a movie in json format
 
+## Requirements
+
+- cURL
+- xdg-open (View the Movie Poster)
+
+```
+sudo apt-get install xdg-utils
+```
+
+- jq 
+
+```
+sudo apt install jq
+```
+
 ## Setup
 - Go to The Movie DB website and create an account
 - Obtain an API key by following the [instructions](https://www.themoviedb.org/faq/api)
@@ -11,6 +26,7 @@ Obtain some basic information about a movie in json format
     APIKEY="your api key"
 ```
 - Run the script
+
 
 ## How to use it
 ```
@@ -60,6 +76,7 @@ Usage :  tmdb.sh [options] title
         ]
     }
 ```
+
 
 
 ## License

@@ -5,8 +5,8 @@
 #   author:    Miroslav Vidovic
 #   file:      tmdb.sh
 #   created:   06.10.2016.-13:29:29
-#   revision:  20.07.2017.
-#   version:   1.1
+#   revision:  26.01.2018.
+#   version:   1.2
 # -----------------------------------------------------------------------------
 # Requirements:
 #   curl, xdg-open, jq
@@ -43,7 +43,7 @@ get_movie_info(){
 }
 
 show_poster(){
- xdg-open http://image.tmdb.org/t/p/w1000/"$1"
+ xdg-open https://image.tmdb.org/t/p/w500"$1"
 }
 
 main(){
