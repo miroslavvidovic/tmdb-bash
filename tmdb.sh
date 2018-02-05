@@ -5,8 +5,8 @@
 #   author:    Miroslav Vidovic
 #   file:      tmdb.sh
 #   created:   06.10.2016.-13:29:29
-#   revision:  26.01.2018.
-#   version:   1.2
+#   revision:  05.02.2018.
+#   version:   1.3
 # -----------------------------------------------------------------------------
 # Requirements:
 #   curl, xdg-open, jq
@@ -34,6 +34,14 @@ help(){
     "
 }
 
+check_requirements(){
+  local requirements=("$@")
+  for app in "${requirements[@]}"; do
+    type "$app" >/dev/null 2>&1 || \
+      { echo >&2 "$app is required but it's not installed. Aborting."; exit 1; }
+  done
+}
+
 # Curl request on the tmdb api
 get_movie_info(){
   curl -s --request GET \
@@ -47,6 +55,9 @@ show_poster(){
 }
 
 main(){
+  # Check for required packages
+  check_requirements jq xdg-open
+
   image=false
 
   while getopts "y:ih" flag; do
