@@ -86,12 +86,10 @@ Usage :  tmdb.sh [options] title
 
 ```
 pkg install curl
-
 ````
 
 ```
 pkg install jq
-
 ```
 
 
