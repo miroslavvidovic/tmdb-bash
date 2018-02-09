@@ -77,6 +77,22 @@ Usage :  tmdb.sh [options] title
     }
 ```
 
+## The Movie DB CLI for Android Using Termux
+
+- Download Termux Android Emulator from Google Playstore
+- put `tmdb.sh` file in any location on your Android device (Don't forget to add your themoviedb API in the Bash File)
+- open the file location via Termux (Give Storage Permission for Termux - https://termux.com/storage.html)
+- it requires cURL & jq pack 
+
+```
+pkg install curl
+
+````
+
+```
+pkg install jq
+
+```
 
 
 ## License
