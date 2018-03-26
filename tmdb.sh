@@ -5,8 +5,8 @@
 #   author:    Miroslav Vidovic
 #   file:      tmdb.sh
 #   created:   06.10.2016.-13:29:29
-#   revision:  05.02.2018.
-#   version:   1.3
+#   revision:  26.03.2018.
+#   version:   1.4
 # -----------------------------------------------------------------------------
 # Requirements:
 #   curl, xdg-open, jq
@@ -28,9 +28,9 @@ help(){
     title        Title of the movie
 
     Options:
-    -y|year      Optional year for better search results
-    -i|image     Display the movie poster as an image
-    -h|help      Display this help message
+    -y    Optional year for better search results
+    -i    Display the movie poster as an image
+    -h    Display this help message
     "
 }
 
@@ -60,20 +60,20 @@ main(){
 
   image=false
 
-  while getopts "y:ih" flag; do
+  while getopts ":yih" flag; do
     case "${flag}" in
-      y|year)
+      y)
         year=${OPTARG}
           ;;
-      i|image)
+      i)
         image=true
           ;;
-      h|help)
+      h)
         help
         exit 0
           ;;
       *)
-        echo -e "\n Option does not exist : $OPTARG\n"
+        echo -e "\\n \\033[1;31m Option does not exist : $OPTARG \\033[0m \\n"
         help
         exit 1
           ;;
@@ -85,7 +85,8 @@ main(){
 
   # If no movie title is supplied display help and exit
   if [[ ! $title ]]; then
-    echo -e "Error: A movie title is required\n"
+    echo -e "\\n"
+    echo -e "\\033[1;31m Error: A movie title is required \\033[0m \\n"
     help
     exit 1
   fi
