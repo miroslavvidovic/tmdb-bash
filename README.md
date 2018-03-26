@@ -1,5 +1,8 @@
 # tmdb-bash
-#### Shell script for The Movie DB API
+
+> Shell script for The Movie DB API
+
+# Movie DB CLI
 
 Obtain some basic information about a movie in json format
 
@@ -29,20 +32,30 @@ sudo apt install jq
 
 
 ## How to use it
+
 ```
 Usage :  tmdb.sh [options] title
 
     title        Title of the movie
 
     Options:
-    -y|year      Optional year for better search results
-    -i|image     Display the movie poster
-    -h|help      Display this help message
+    -y     Optional year for better search results
+    -i     Display the movie poster
+    -h     Display this help message
 ```
 
-#### Example
+## Examples
+
+- Normal Search using title
+
 ```shell
-    tmdb.sh -y 2017 "The Mummy"    
+tmdb.sh "The Mummy"
+```
+
+- Search with year
+
+```shell
+tmdb.sh -y 2017 "The Mummy"    
 ```
 
 ```json
@@ -77,6 +90,12 @@ Usage :  tmdb.sh [options] title
     }
 ```
 
+- Open Movie Poster on Browser
+
+```shell
+tmdb.sh -i "The Mummy"
+```
+
 ## The Movie DB CLI for Android Using Termux
 
 - Download Termux Android Emulator from Google Playstore
@@ -92,8 +111,8 @@ pkg install curl
 pkg install jq
 ```
 
-
 ## License
+
 MIT License
 
 Copyright (c) 2016 Miroslav Vidović
